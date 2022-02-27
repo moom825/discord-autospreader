@@ -1,0 +1,7 @@
+C:\Users\maxim\Desktop\project discord spreader\project discord spreader\obj\Debug\project discord spreader.csproj.CoreCompileInputs.cache
+C:\Users\maxim\Desktop\project discord spreader\project discord spreader\bin\Debug\project discord spreader.exe.config
+C:\Users\maxim\Desktop\project discord spreader\project discord spreader\bin\Debug\project discord spreader.exe
+C:\Users\maxim\Desktop\project discord spreader\project discord spreader\bin\Debug\project discord spreader.pdb
+C:\Users\maxim\Desktop\project discord spreader\project discord spreader\obj\Debug\project discord spreader.exe
+C:\Users\maxim\Desktop\project discord spreader\project discord spreader\obj\Debug\project discord spreader.pdb
+C:\Users\maxim\Desktop\project discord spreader\project discord spreader\obj\Debug\project discord spreader.csprojAssemblyReference.cache
