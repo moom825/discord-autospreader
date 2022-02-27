@@ -8,7 +8,7 @@ This tool is for educational use only, the author will not be held responsible f
 ## **Credits**
 The rootkit in the project was made by "bytecode77". the source of the rootkit can be found here: https://github.com/bytecode77/r77-rootkit
 
-## **Info**
+## **Capabilities**
 
 This tool has the option of a discord auto spreader, meaning once you infect someone it will look through their discord, grab their friends and message them with the virus they first got infected with, and the process repeats with new person infected. 
 
