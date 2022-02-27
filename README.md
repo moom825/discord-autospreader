@@ -12,11 +12,14 @@ The rootkit in the project was made by "bytecode77". the source of the rootkit c
 
 This tool has the option of a discord auto spreader, meaning once you infect someone it will look through their discord, grab their friends and message them with the virus they first got infected with, and the process repeats with new person infected. 
 
-
 This tool has the option to hide itself from the file system and task-manager(as well as other process managers) via a rootkit. 
+
 This tool has the option to add it self to startup so when the computer start, the file starts. 
+
 This tool has the option to perform a uac-bypass(meaning is will get admin without prompting for admin).
+
 This tool has the option to run a selected payload, and it can run it in 2 ways. 1: load your file into memory(meaning it does not need to touch the filesystem), 2: and if your file is not combatible with memory injection it will drop it to disk and run it.
+
 This tool has the option to copy itself to appdata as well.
 
 ## **Contact:**
