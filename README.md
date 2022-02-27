@@ -22,6 +22,8 @@ This tool has the option to run a selected payload, and it can run it in 2 ways.
 
 This tool has the option to copy itself to appdata as well.
 
+For more info go to the info tab inside the builder.
+
 ## **Contact:**
 Feel free to contact me if you have any problems.
 https://discord.gg/V589WeDmUr.
